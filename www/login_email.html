@@ -1,0 +1,68 @@
+<div class="login-page-wrapper" style="width: 100%; display: inline-block; float: left">
+    <div class="login-page-content no-vh">
+        <div class="login-wrapper-top">
+            <div class="login-email-page-wrap">
+                <form action="" method="post">
+                    <div class="login-page-login-button no-padding">
+                        <input id="login_email" class="login-input login-input-email" type="email" value=""
+                               placeholder="EMAIL">
+                        <img class="error-login-image" src="img/red-x.png" alt="Error Login Image" />
+                    </div>
+                    <div class="login-page-login-button no-padding separator-margin">
+                        <input id="login_password" class="login-input login-input-password" type="password" value=""
+                               placeholder="MOT DE PASSE">
+                        <img class="error-login-image" src="img/red-x.png" alt="Error Login Image" />
+                    </div>
+                    <div class="login-middle-wrapper">
+                        <p id="reset_password" class="login-middle-text">J'ai oublié mon mot de passe</p>
+                    </div>
+                    <div id="login_with_email" class="login-email-page-login-button">
+                        se connecter
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Auto focus input field for email
+    $j(function () {
+        $j("#login_email").focus();
+    });
+
+    /**
+     * Method for key press on input fields
+     */
+    $j('input').keypress(function(e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if ((code === 13 || code === 10) && $j('#login_email').val() !== '' && $j('#login_password').val() !== '') {
+            var usr = $j('#login_email').val();
+            var pas = $j('#login_password').val();
+            loginCustomer(usr, pas);
+        }
+    });
+
+    /**
+     * Call method when customer wants login
+     */
+    $j(document).on('tap', "#login_with_email", function () {
+        if ($j('#login_email').val() !== '' && $j('#login_password').val() !== '') {
+            var usr = $j('#login_email').val();
+            var pas = $j('#login_password').val();
+            loginCustomer(usr, pas);
+        } else {
+            $j('.error-login-image').show();
+        }
+    });
+
+    //Hide error when customer try enter new email
+    $j('#login_email').focusin(function () {
+        $j('.error-login-image:first').hide();
+    });
+
+    // Hide error when customer try enter new password
+    $j('#login_password').focusin(function () {
+        $j('.error-login-image:last').hide();
+    });
+
+</script>

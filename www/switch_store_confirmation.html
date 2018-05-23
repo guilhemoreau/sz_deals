@@ -1,0 +1,32 @@
+<div class="switch-shop-page-wrapper" style="width: 100%; display: inline-block; float: left">
+    <div class="switch-shop-page-content">
+        <div class="switch-shop-txt-two no-internet-connection">
+            <!-- Code -->
+        </div>
+        <div class="switch-shop-btn-wrapper">
+            <img id="cancel_change_store" class="btn-change-store-img" src="img/cancel.png">
+            <img id="approve_change_store" class="btn-change-store-img space-between-btn" src="img/check.png">
+        </div>
+    </div>
+</div>
+<script>
+    // ADD top margin 50px
+    $j('#container').css('margin-top', '50px');
+
+    // Customer tap Cancel
+    $j('#cancel_change_store').on('tap', function (e) {
+        e.preventDefault();
+        _tmpIdDefaultStore = null;
+        loadPage('shop_select.html');
+    });
+
+    $j('.no-internet-connection').html(_apiNoteErrorData.deals_location_change.message);
+
+    // Customer tap Approve
+    $j('#approve_change_store').on('tap', function (e) {
+        e.preventDefault();
+        _idDefaultStore = _tmpIdDefaultStore;
+        saveDataToSmartPhone('id_default_store', _idDefaultStore);
+        location.reload();
+    });
+</script>

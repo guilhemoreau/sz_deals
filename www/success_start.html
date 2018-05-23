@@ -1,0 +1,31 @@
+<div class="notification-page-wrapper animation-wrapper">
+    <div class="animation-wrapper">
+        <div id="animation_success" class="animation-content"></div>
+    </div>
+</div>
+<script>
+    // Remove top margin 50px
+    $j('#container').css('margin-top', '-50px');
+    $j('.app').css('overflow', 'hidden');
+
+    // Animation loading
+    var anim = bodymovin.loadAnimation({
+        container: document.getElementById('animation_success'),
+        renderer: 'svg',
+        prerender: true,
+        loop: false,
+        scale: true,
+        autoplay: true,
+        path: 'animations/opening.json',
+        rendererSettings: {
+            progressiveLoad: false,
+            preserveAspectRatio: 'xMaxYMin meet'
+        }
+    });
+
+    anim.addEventListener('complete', doComplete);
+
+    function doComplete() {
+        loadPage('deals.html');
+    }
+</script>

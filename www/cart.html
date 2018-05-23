@@ -1,0 +1,77 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://pay.sandbox.datatrans.com/upp/payment/js/datatrans-1.0.2.js"></script>
+<div class="cart-page-wrapper">
+    <div class="cart-page-content">
+        <div class="cart-product-list-wrapper">
+            <div class="cart-top-text-wrapper">
+                <p class="cart-top-text">Votre Commande</p>
+            </div>
+            <div id="cart_product_wrapper" class="cart-product-wrapper">
+                <!-- CODE -->
+                <!--<iframe id="testFrm" width="100%" height="200px" src="http://syncit.ddns.net:8082/SushiZenTest/success.php"></iframe>-->
+            </div>
+        </div>
+        <div class="cart-bottom-wrapper">
+            <div class="cart-bottom-total-wrapper">
+                <div class="cart-bottom-total-row total-title-row">
+                    <div class="cart-row-left">
+                        Total
+                    </div>
+                    <div class="cart-row-right">
+                        CHF <p class="cart-total-price">0</p>
+                    </div>
+                </div>
+                <div class="cart-bottom-total-row">
+                    <div class="cart-row-left">
+                        dont T.V.A. <p class="cart-tva-percentage">0</p>%
+                    </div>
+                    <div class="cart-row-right">
+                        <p class="cart-total-tva-price">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-bottom-button-wrapper">
+                <div class="cart-button-pay">
+                    <p id="cart_button_pay_text" class="cart-button-pay-text">Payer</p>
+                </div>
+            </div>
+
+            <!--<form target="_blank"-->
+                    <!--id="paymentForm"-->
+                  <!--data-merchant-id="1100004624"-->
+                  <!--data-amount="1000"-->
+                  <!--data-currency="CHF"-->
+                  <!--data-paymentmethod="VIS,ECA,AMX,PFC,PAP,DIN,DIS,ESY"-->
+                  <!--data-language="en"-->
+                  <!--data-refno="123456789"-->
+                  <!--data-sign="130930145825488031"-->
+                  <!--data-theme-configuration="{'brandColor': '#01BD32','textColor': 'white','logoType': 'circle','logoBorderColor': '#000000','brandButton': 'true','logoSrc': 'merchant-logo.svg'}"-->
+            <!--&gt;-->
+                <!--<button id="paymentButton">Pay</button>-->
+            <!--</form>-->
+
+            <!--<script type="text/javascript">-->
+                <!--$j("#paymentButton").click(function () {-->
+                    <!--Datatrans.startPayment({'form': '#paymentForm'});-->
+                <!--});-->
+            <!--</script>-->
+
+            <div class="cart-bottom-text-wrapper">
+                <p class="cart-bottom-text">En cliquant sur le bouton PAYER, vous acceptez par la méme les</p>
+                <p id="cart_bottom_condition" class="cart-bottom-conditions">Conditions générales de vente</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    // $j(document).on('tap', "#cart_button_pay_text", function () {
+    //     var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    //     ref.addEventListener('exit', function(ev) {
+    //         var asd = ev;
+    //         alert(ev);
+    //     });
+    // })
+
+</script>

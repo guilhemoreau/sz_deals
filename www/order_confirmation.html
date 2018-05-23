@@ -1,0 +1,26 @@
+<div class="order-conf-page-wrapper" style="width: 100%; display: inline-block; float: left">
+    <div class="order-conf-page-content order-conf-background">
+        <div class="order-conf-top-wrapper">
+            <div class="order-conf-top-up">
+                <p id="order_conf_top_text" class="order-conf-top-text">
+                    <!-- Code -->
+                </p>
+            </div>
+            <div class="order-conf-top-down">
+                <div class="order-conf-top-down-content">
+                    <p id="order_conf_pickup_name" class="order-conf-pickup-name"></p>
+                    <p id="order_conf_pickup_address" class="order-conf-pickup-address"></p>
+                    <p class="order-conf-pickup-map">voir sur la carte</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-conf-bot-wrapper">
+            <img class="order-conf-cat-image" src="img/merci-cat.png" alt="Merci">
+        </div>
+    </div>
+</div>
+<script>
+    $j(document).on('tap', ".order-conf-pickup-map", function () {
+        window.open('maps://?q=' + destinationMap, '_system');
+    });
+</script>

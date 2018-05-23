@@ -1,0 +1,20 @@
+id_default_store => Id Default Store
+customer_id => Id Of Current Customer
+
+
+
+
+add info.plinfo
+
+<key>UIViewControllerBasedStatusBarAppearance</key>
+<false/>
+
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>URL_SCHEME</string>
+    </array>
+  </dict>
+</array>

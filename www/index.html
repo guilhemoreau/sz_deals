@@ -1,0 +1,137 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--<meta name="msapplication-tap-highlight" content="no" />-->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+    <title>SUSHIZEN</title>
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/sushizen.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/data/allDummyData.js"></script>
+    <script type="text/javascript" src="js/data/staticData.js"></script>
+    <script type="text/javascript" src="js/data/allDataFromServer.js"></script>
+    <script type="text/javascript" src="js/connect.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <!--<script type="text/javascript" src="js/datatrans_sushizen.js"></script>-->
+    <script type="text/javascript" src="js/fb_custom.js"></script>
+    <script src="js/bodymovin.js"></script>
+
+    <script type="text/javascript" src="js/sushizen.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/allData.js"></script>
+</head>
+
+<body>
+<div id="hamburger" class="icon-hamburger" style="display: none;">
+    <img src="img/hamburger.png" alt="Menu" class="icon-hamburger-top-left">
+</div>
+    <div id="app_sushizen" class="app">
+
+        <div id="top_bar" class="top-bar-wrapper" >
+            <div class="number-of-item-wrapper" style="display: none;">
+                <div class="number-of-item-content">
+                    <p class="top-bar-current-product">0</p><p class="top-bar-separator">|</p><p class="top-bar-number-of-product">0</p>
+                </div>
+            </div>
+            <div id="basket" class="icon-basket" style="display: none;">
+                <img src="img/cart_empty.svg" alt="Cart" class="icon-cart-top-left top-right-icon-swap" />
+                <div id="number_product_in_cart_wrap" class="basket-item-count">
+                    <span id="number_product_in_cart" class="basket-counter-number">
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="menu_animation" style="display: none"></div>
+        <script>
+            // Animation loading
+            var animManu = bodymovin.loadAnimation({
+                container: document.getElementById('menu_animation'),
+                renderer: 'svg',
+                prerender: true,
+                loop: false,
+                scale: true,
+                autoplay: false,
+                path: 'animations/menu.json',
+                rendererSettings: {
+                    progressiveLoad: false,
+                    preserveAspectRatio: 'xMaxYMin meet'
+                }
+            });
+        </script>
+        <nav id="c-menu-slide-top" class="c-menu c-menu-slide-top" style="display: none;">
+            <ul class="c-menu-items">
+                <div class="menu-item-wrapper">
+                    <li class="c-menu-item c-menu-first">
+                        <div id="menu_about" class="c-menu-link">
+                            <div class="c-menu-link-wrapper c-menu-first-link">A Propos</div>
+                        </div>
+                    </li>
+                    <li class="c-menu-item">
+                        <div id="menu_deals" class="c-menu-link">
+                            <div class="c-menu-link-wrapper">Les Deals</div>
+                        </div>
+                    </li>
+                    <li class="c-menu-item">
+                        <div id="menu_shops" class="c-menu-link">
+                            <div class="c-menu-link-wrapper">Mon Shop</div>
+                        </div>
+                    </li>
+                    <li class="c-menu-item">
+                        <div id="menu_order_archive" class="c-menu-link">
+                            <div class="c-menu-link-wrapper">Ma Carte De Fidelité</div>
+                        </div>
+                    </li>
+                    <li class="c-menu-item">
+                        <div id="menu_conditions" class="c-menu-link">
+                            <div class="c-menu-link-wrapper">Conditions Générales</div>
+                        </div>
+                    </li>
+                    <li class="c-menu-item">
+                        <div id="menu_logout" class="c-menu-link">
+                            <div class="c-menu-link-wrapper c-menu-last">Se Déconnecter</div>
+                        </div>
+                    </li>
+                </div>
+                <div id="cat_menu" class="cat-menu">
+                    <img class="cat-menu-image" src="img/cat_menu.png" alt="Cat Menu" />
+                    <div class="menu-bottom-text">
+                        <div class="menu-bottom-text-top">
+                            <img class="menu-sushizen-logo" src="img/sushizen_logo.png" alt="Logo SishiZen" />
+                        </div>
+                        <div id="menu_legal_page" class="menu-bottom-text-bot">
+                            <p class="menu-bottom-legal">Mentions légales</p>
+                            <div class="menu-bot-copy-right">
+                                <p class="menu-bottom-copy">&copy; sushizen </p>
+                                <p id="menu_bottom_copy" class="menu-bottom-copy-year"></p>
+                            </div>
+                            <script>
+                                var obj = new Date();
+                                $j('#menu_bottom_copy').html(obj.getFullYear());
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <div id="container" class="container">
+            <!-- #Code -->
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

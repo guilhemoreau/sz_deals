@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>cart_empty</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cart_empty" stroke="#FFFFFF">
+            <path d="M11.0012189,1.00748397 L11.0012189,12.5 L1.5162211,12.5 C0.750203246,12.5 0.34293502,13.0446251 0.555881759,13.7907923 L2.8800726,21.9347771 C3.12280092,22.7852993 4.0668603,23.5 4.94587005,23.5 L20.2882405,23.5 C21.163902,23.5 22.0869178,22.7896397 22.309982,21.9444064 L24.4592485,13.8004216 C24.656653,13.0524182 24.2318288,12.5 23.460142,12.5 L14.2404732,12.5 L14.2404732,1.00748397 C14.2404732,0.725652605 14.0151252,0.5 13.7358291,0.5 L11.505863,0.5 C11.2297135,0.5 11.0012189,0.728530812 11.0012189,1.00748397 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

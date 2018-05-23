@@ -1,0 +1,34 @@
+<div class="login-page-wrapper" style="width: 100%; display: inline-block; float: left">
+    <div class="login-page-content">
+        <div class="login-wrapper-top">
+            <div class="login-page-login">
+                <div id="login_login_email" class="login-page-login-button">
+                    J'AI UN COMPTE
+                </div>
+                <div id="login_login_fb" class="login-page-login-button-fb separator-margin">
+                    <i class="fa fa-facebook fb-icon-button" aria-hidden="true"></i> Se connecter avec Facebook
+                </div>
+            </div>
+        </div>
+        <div class="login-wrapper-bottom">
+            <div class="login-page-mid-wrapper">
+                <p class="login-page-min">Si vous n'ètes pas encore inscrit</p>
+            </div>
+            <div class="login-page-login">
+                <div id="login_create_acc" class="login-page-login-button">
+                    Crèer un compte
+                </div>
+            </div>
+            <div class="login-page-bottom-text-wrapper">
+                <p class="login-page-bottom-text">Il faut vous identifier pour pouvoir effectuer des achats.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //Method for custom fb login
+    $j(document).on("tap", "#login_login_fb", function (e) {
+        e.preventDefault();
+        facebookCustomLogin();
+    });
+</script>

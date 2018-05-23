@@ -1,0 +1,19 @@
+<div class="select-shop-page-wrapper" style="width: 100%; display: inline-block; float: left">
+    <div id="wrapper_all_location" class="select-shop-page-content">
+        <!-- CODE -->
+    </div>
+    <script>
+        // REMOVE top margin 50px
+        $j('#container').css('margin-top', 'unset');
+
+        // Show All Locations
+        $j('#wrapper_all_location').html(drawAllLocation());
+
+        // Function for change default store
+        $j(document).on('tap', '.select-shop-row', function (e) {
+            e.preventDefault();
+            _tmpIdDefaultStore = $j(this).data('id');
+            loadPage('switch_store_confirmation.html');
+        });
+    </script>
+</div>

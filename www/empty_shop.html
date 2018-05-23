@@ -1,0 +1,59 @@
+<!--<div class="notification-page-wrapper">-->
+    <!--<div class="notification-page-content">-->
+        <!--<div class="notification-page-top">-->
+            <!--<div class="notification-cloud-wrapper">-->
+                <!--<img class="notification-cloud" src="img/cloud_01.png"/>-->
+                <!--<div class="notification-text-wrapper">-->
+                    <!--<p id="notification_text" class="notification-text"></p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<img id="next_action_from_notification" class="loading-cat-error" src="img/white-worry-cat.png"/>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="notification-error-animation-page-wrapper">
+    <div id="empty_shop_animation">
+        <p id="notification_text" class="notification-text-error-animation"></p>
+        <!-- Code -->
+    </div>
+</div>
+
+
+<script>
+    $j('#container').css('margin-top', '0');
+
+    // Animation loading
+    var animEmptyShop = bodymovin.loadAnimation({
+        container: document.getElementById('empty_shop_animation'),
+        renderer: 'svg',
+        prerender: true,
+        loop: true,
+        scale: true,
+        autoplay: true,
+        path: 'animations/bubble.json',
+        rendererSettings: {
+            progressiveLoad: false,
+            preserveAspectRatio: 'xMaxYMin meet'
+        }
+    });
+
+    var currentSentence = 0;
+    var maxSentence = _apiAllBubblesData.bubbles.empty.length;
+
+    // $j(document).on('tap', "#next_action_from_notification", function (e) {
+    //     e.preventDefault();
+    //     currentSentence++;
+    //     if (currentSentence < maxSentence) {
+    //         $j('#notification_text').html(_apiAllBubblesData.bubbles.empty[currentSentence].text);
+    //     } else {
+    //         if (_nextActionUrl === "restart") {
+    //             location.reload();
+    //         } else {
+    //             loadPage(_nextActionUrl);
+    //         }
+    //     }
+    // });
+
+    //Show first sentence
+    $j('#notification_text').html(_apiAllBubblesData.bubbles.empty[currentSentence].text);
+</script>

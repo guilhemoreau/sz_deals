@@ -1,0 +1,23 @@
+<div class="notification-page-wrapper animation-wrapper">
+    <div id="animation">
+        <!-- Code -->
+    </div>
+</div>
+<script>
+    // Animation loading
+    var animLoad = bodymovin.loadAnimation({
+        container: document.getElementById('animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        rendererSettings: {
+            progressiveLoad:true,
+            preserveAspectRatio:'xMaxYMin meet'
+        },
+        path: 'animations/loading-loop.json'
+    });
+
+    setTimeout(function () {
+        checkAllCalls();
+    }, 3000)
+</script>

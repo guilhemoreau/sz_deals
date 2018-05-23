@@ -1,0 +1,45 @@
+<div class="count-down-page-wrapper">
+    <div id="animation"></div>
+    <canvas id="canvas" style="background-color:transparent"></canvas>
+</div>
+<script>
+
+    // var currentSentence = 0;
+    // var maxSentence = _apiAllBubblesData.bubbles.countdown.length;
+    //
+    // $j(document).on('tap', "#count_down_page_tap", function () {
+    //     currentSentence++;
+    //     if (currentSentence < maxSentence) {
+    //         $j('#count_down_text').html(_apiAllBubblesData.bubbles.countdown[currentSentence].text);
+    //     }
+    // });
+    //
+    // //Show first sentence
+    // $j('#count_down_text').html(_apiAllBubblesData.bubbles.countdown[currentSentence].text);
+
+
+    // Remove top margin 50px
+    $j('#container').css('margin-top', '-50px');
+    $j('.app').css('overflow', 'hidden');
+
+    // Animation loading
+    var anim = bodymovin.loadAnimation({
+        container: document.getElementById('animation'),
+        renderer: 'svg',
+        prerender: true,
+        loop: false,
+        scale: true,
+        autoplay: true,
+        path: 'animations/loading-to-clock.json',
+        rendererSettings: {
+            progressiveLoad: false,
+            preserveAspectRatio: 'xMaxYMin meet'
+        }
+    });
+
+    // anim.addEventListener('complete', doComplete);
+    //
+    // function doComplete() {
+    //     loadPage('deals.html');
+    // }
+</script>

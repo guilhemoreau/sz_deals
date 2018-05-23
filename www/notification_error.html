@@ -1,0 +1,26 @@
+<div class="notification-error-animation-page-wrapper">
+    <div id="error_animation">
+        <p id="notification_text" class="notification-text-error-animation"></p>
+        <!-- Code -->
+    </div>
+</div>
+<script>
+    // Animation loading
+    var animError = bodymovin.loadAnimation({
+        container: document.getElementById('error_animation'),
+        renderer: 'svg',
+        prerender: true,
+        loop: false,
+        scale: true,
+        autoplay: true,
+        path: 'animations/bubble.json',
+        rendererSettings: {
+            progressiveLoad: false,
+            preserveAspectRatio: 'xMaxYMin meet'
+        }
+    });
+
+    setTimeout(function () {
+        location.reload();
+    }, 5500);
+</script>
